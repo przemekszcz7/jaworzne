@@ -19,16 +19,14 @@ body {
   background-color: var(--paper-bg);
   color: var(--ink-black);
   font-family: var(--font-serif);
+  overflow-x: hidden;
 }
 
 /* Grain Overlay */
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
   opacity: 0.05;
   pointer-events: none;
   z-index: 9999;
