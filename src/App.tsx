@@ -73,8 +73,8 @@ export default function App() {
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
               className="relative w-72 h-72 md:w-[450px] md:h-[450px] shrink-0"
             >
-              <div className="absolute inset-0 border-[20px] border-white/5 rounded-full animate-[spin_40s_linear_infinite]" />
-              <div className="absolute inset-[10%] border-[2px] border-white/10 rounded-full animate-[spin_20s_linear_infinite_reverse]" />
+              <div className="absolute inset-0 border-[20px] border-white/5 rounded-full animate-[spin_40s_linear_infinite] transform-gpu will-change-transform" />
+              <div className="absolute inset-[10%] border-[2px] border-white/10 rounded-full animate-[spin_20s_linear_infinite_reverse] transform-gpu will-change-transform" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <img 
                   src={logoUrl} 
@@ -146,7 +146,7 @@ export default function App() {
               <div className="vintage-border overflow-hidden rounded-sm shadow-[30px_30px_0_rgba(0,0,0,0.03)] group transition-all">
                 <img src={images[0]} alt="Fresh fish preparing" className="w-full h-auto grayscale brightness-90 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-[2000ms]" />
               </div>
-              <div className="absolute -bottom-12 -left-12 w-64 h-auto border-[12px] border-[#f5f2ed] shadow-2xl vintage-border overflow-hidden rounded-sm hidden xl:block z-10 animate-[bounce_5s_ease-in-out_infinite]">
+              <div className="absolute -bottom-12 -left-12 w-64 h-auto border-[12px] border-[#f5f2ed] shadow-2xl vintage-border overflow-hidden rounded-sm hidden xl:block z-10 animate-[bounce_5s_ease-in-out_infinite] transform-gpu will-change-transform">
                 <img src={images[1]} alt="Interior" className="w-full h-auto object-cover" />
               </div>
               <div className="absolute top-10 -right-10 px-8 py-4 bg-black text-white text-[10px] uppercase tracking-[0.5em] font-black -rotate-90 origin-right">
