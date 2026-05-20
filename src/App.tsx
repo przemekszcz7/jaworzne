@@ -27,7 +27,7 @@ export default function App() {
   const logoUrl = "https://i.ibb.co/XksJCtHh/294580978-579868427178220-9190990582905189481-n.jpg";
 
   return (
-    <div className="min-h-screen flex flex-col selection:bg-wood-dark selection:text-white">
+    <div className="min-h-screen flex flex-col selection:bg-wood-dark selection:text-white overflow-x-hidden w-full">
       {/* Marquee Ticker */}
       <div className="marquee-container text-xs uppercase tracking-[0.4em] font-serif z-50">
         <div className="marquee-content">
