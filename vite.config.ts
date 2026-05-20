@@ -5,7 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(({ mode }) => {
   return {
-    base: mode === 'production' ? '/smazalniajaworze/' : '/',
+    base: mode === 'production' ? '/jaworzne/' : '/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
