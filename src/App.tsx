@@ -122,8 +122,8 @@ export default function App() {
                 <span className="uppercase text-[11px] tracking-[0.6em] opacity-40 font-black flex items-center gap-4">
                   <div className="h-px w-8 bg-black opacity-20" /> Tradycja spod Jaworza
                 </span>
-                <h2 className="font-display text-5xl sm:text-6xl md:text-8xl italic leading-[0.95] tracking-tight">
-                  Smak, który<br /><span className="text-7xl sm:text-9xl md:text-[11rem] not-italic uppercase tracking-tighter">Pamiętasz</span>
+                <h2 className="font-display text-4xl sm:text-6xl md:text-8xl italic leading-[0.95] tracking-tight">
+                  Smak, który<br /><span className="text-5xl sm:text-8xl md:text-[10rem] lg:text-[11rem] not-italic uppercase tracking-tighter">Pamiętasz</span>
                 </h2>
               </div>
               <div className="space-y-10 font-serif text-2xl text-gray-800 leading-relaxed text-justify-edge opacity-90">
@@ -172,7 +172,7 @@ export default function App() {
           <div className="flex flex-col md:flex-row justify-between items-end mb-32 gap-12">
             <div className="space-y-6">
                <span className="uppercase text-[12px] tracking-[0.6em] opacity-40 font-bold">Karta dań</span>
-               <h2 className="font-display text-6xl sm:text-7xl md:text-9xl uppercase tracking-tighter leading-none">Nasze<br />Specjały</h2>
+               <h2 className="font-display text-4xl sm:text-6xl md:text-9xl uppercase tracking-tighter leading-none">Nasze<br />Specjały</h2>
             </div>
             <p className="font-serif text-2xl italic opacity-60 md:text-right max-w-sm">
               "Każda porcja to kawałek naszej pasji, podawany prosto z serca Jaworza."
@@ -200,12 +200,12 @@ export default function App() {
               <motion.div 
                 key={idx}
                 whileHover={{ backgroundColor: "#1a1a1a", color: "#f5f2ed" }}
-                className="p-20 bg-white space-y-10 group transition-colors duration-700"
+                className="p-8 sm:p-12 md:p-16 lg:p-20 bg-white space-y-10 group transition-colors duration-700"
               >
                 <div className="text-black group-hover:text-amber-200 transition-colors">
                    {item.icon}
                 </div>
-                <h3 className="font-display text-4xl uppercase tracking-tight leading-none">{item.title}</h3>
+                <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl uppercase tracking-tight leading-none">{item.title}</h3>
                 <p className="font-serif text-xl opacity-70 leading-relaxed italic">{item.desc}</p>
                 <div className="pt-10 flex items-center gap-4 opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">
                    <div className="h-px w-10 bg-amber-200" />
@@ -289,7 +289,7 @@ export default function App() {
                    <div className="mt-8 flex justify-between items-center border-t border-black/5 pt-6">
                       <div className="flex flex-col">
                         <span className="text-[9px] uppercase font-black tracking-[0.4em] opacity-30">Jaworze</span>
-                        <span className="font-display text-lg italic opacity-70">Specjał Domowy №{i + 1}</span>
+
                       </div>
                       <div className="h-0.5 w-8 bg-black/10" />
                    </div>
@@ -300,31 +300,31 @@ export default function App() {
         </section>
 
         {/* Logistics & Location Section */}
-        <section className="bg-white py-48">
-          <div className="max-w-7xl mx-auto px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-32 items-center">
-              <div id="hours" className="lg:col-span-5 space-y-20">
-                 <div className="space-y-6">
+        <section className="bg-white py-20 sm:py-32 lg:py-48">
+          <div className="max-w-7xl mx-auto px-4 sm:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-32 items-center">
+              <div id="hours" className="lg:col-span-5 space-y-12 sm:space-y-16 lg:space-y-20">
+                 <div className="space-y-4 sm:space-y-6">
                     <span className="uppercase text-[12px] tracking-[0.7em] opacity-40 font-black">Plan Dnia</span>
-                    <h2 className="font-display text-6xl sm:text-7xl md:text-[8rem] uppercase tracking-tighter leading-[0.8]">Godziny<br />Otwarcia</h2>
+                    <h2 className="font-display text-4xl sm:text-6xl md:text-[7rem] lg:text-[8rem] uppercase tracking-tighter leading-[0.8]">Godziny<br />Otwarcia</h2>
                  </div>
                  
-                 <div className="space-y-8 text-3xl font-serif">
-                   <div className="flex justify-between items-center text-red-700 border-b-2 border-black/5 pb-8 opacity-50">
+                 <div className="space-y-4 sm:space-y-6 lg:space-y-8 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-serif">
+                   <div className="flex justify-between items-center text-red-700 border-b-2 border-black/5 pb-4 sm:pb-6 lg:pb-8 opacity-50">
                      <span className="italic">Poniedziałek</span>
-                     <span className="uppercase tracking-[0.3em] text-[11px] font-black border border-red-700 px-4 py-1">Zamknięte</span>
+                     <span className="uppercase tracking-[0.3em] text-[11px] font-black border border-red-700 px-3 py-1 sm:px-4 sm:py-1">Zamknięte</span>
                    </div>
                    {["Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"].map(day => (
-                     <div key={day} className="flex justify-between items-center border-b border-black/5 pb-8 group">
-                       <span className="group-hover:pl-6 transition-all duration-500">{day}</span>
-                       <span className="font-display tracking-[0.2em] text-2xl">11:00 - 18:00</span>
+                     <div key={day} className="flex justify-between items-center border-b border-black/5 pb-4 sm:pb-6 lg:pb-8 group">
+                       <span className="group-hover:pl-4 transition-all duration-500">{day}</span>
+                       <span className="font-display tracking-[0.2em] text-base sm:text-lg lg:text-2xl">11:00 - 18:00</span>
                      </div>
                    ))}
                  </div>
               </div>
 
-              <div id="contact" className="lg:col-span-7 space-y-16">
-                 <div className="vintage-border h-[700px] relative rounded-sm shadow-[50px_50px_100px_rgba(0,0,0,0.05)] overflow-hidden">
+              <div id="contact" className="lg:col-span-7 space-y-12 sm:space-y-16">
+                 <div className="vintage-border h-[350px] sm:h-[500px] lg:h-[700px] relative rounded-sm shadow-[50px_50px_100px_rgba(0,0,0,0.05)] overflow-hidden">
                     <iframe 
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2575.599235079315!2d18.944003077002183!3d49.79360103443979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716a09041ab48a3%3A0x793a778049ed6d95!2sSzkolna%207%2C%2043-384%20Jaworze!5e0!3m2!1spl!2spl!4v1779189164992!5m2!1spl!2spl" 
                       width="100%" 
@@ -335,14 +335,14 @@ export default function App() {
                       referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
                  </div>
-                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-center md:text-left">
+                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 text-left">
                     <div className="space-y-4">
                        <p className="text-[10px] uppercase tracking-[0.5em] opacity-40 font-black">Telefonicznie</p>
-                       <a href="tel:884747885" className="font-display text-4xl hover:opacity-50 transition-opacity">884 747 885</a>
+                       <a href="tel:884747885" className="font-display text-2xl sm:text-3xl lg:text-4xl hover:opacity-50 transition-opacity">884 747 885</a>
                     </div>
-                    <div className="space-y-4 text-center md:text-right">
+                    <div className="space-y-4 text-left md:text-right">
                        <p className="text-[10px] uppercase tracking-[0.5em] opacity-40 font-black">Odwiedź Nas</p>
-                       <p className="font-display text-4xl">Szkolna 7,<br />Jaworze</p>
+                       <p className="font-display text-2xl sm:text-3xl lg:text-4xl">Szkolna 7,<br />Jaworze</p>
                     </div>
                  </div>
               </div>
@@ -400,18 +400,18 @@ export default function App() {
             <div className="inline-block border border-white/20 p-6 rounded-full grayscale opacity-40 mb-4">
               <img src={logoUrl} alt="Logo footer" className="w-20 h-20 rounded-full object-cover" />
             </div>
-            <h3 className="font-display text-7xl md:text-9xl uppercase tracking-[0.2em] leading-none">Do<br />Usłyszenia</h3>
-            <p className="font-serif text-3xl opacity-50 italic">Czekamy na Ciebie w Smażalnia Jaworze.</p>
+            <h3 className="font-display text-3xl sm:text-6xl md:text-[8rem] lg:text-9xl uppercase tracking-[0.1em] sm:tracking-[0.2em] leading-none">Do<br />Usłyszenia</h3>
+            <p className="font-serif text-lg sm:text-2xl md:text-3xl opacity-50 italic px-4">Czekamy na Ciebie w Smażalnia Jaworze.</p>
           </div>
           
           <div className="w-full h-px bg-white/10" />
 
-          <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-20 text-center md:text-left font-serif">
-             <div className="space-y-6">
+          <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20 text-center md:text-left font-serif">
+             <div className="space-y-4 md:space-y-6">
                 <p className="text-[12px] uppercase tracking-[0.6em] opacity-40 font-black">Jaworze</p>
-                <p className="text-3xl font-display">ul. Szkolna 7<br />43-384 Jaworze</p>
+                <p className="text-2xl sm:text-3xl font-display">ul. Szkolna 7<br />43-384 Jaworze</p>
              </div>
-             <div className="flex flex-col items-center justify-center space-y-8">
+             <div className="flex flex-col items-center justify-center space-y-6 md:space-y-8 py-4 md:py-0">
                 <div className="flex gap-10">
                    <a href="https://www.facebook.com/smazalnia.jaworze" className="w-20 h-20 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-wood-dark transition-all scale-125 shadow-3xl bg-black/40">
                      <Facebook size={32} />
@@ -420,18 +420,18 @@ export default function App() {
                      <Mail size={32} />
                    </a>
                 </div>
-                <p className="text-[10px] uppercase tracking-[0.8em] opacity-20">Śledź Nasze Nowości</p>
+                <p className="text-[10px] uppercase tracking-[0.4em] sm:tracking-[0.8em] opacity-20">Śledź Nasze Nowości</p>
              </div>
-             <div className="space-y-6 text-center md:text-right">
+             <div className="space-y-4 md:space-y-6 text-center md:text-right">
                 <p className="text-[12px] uppercase tracking-[0.6em] opacity-40 font-black">Kontakt</p>
-                <p className="text-3xl font-display">884 747 885</p>
-                <p className="opacity-60 text-xl">smazalniajaworze@gmail.com</p>
+                <p className="text-2xl sm:text-3xl font-display">884 747 885</p>
+                <p className="opacity-60 text-base sm:text-xl break-all">smazalniajaworze@gmail.com</p>
              </div>
           </div>
 
           <div className="pt-24 space-y-6 opacity-20 hover:opacity-50 transition-opacity">
              <div className="w-16 h-[1px] bg-white mx-auto" />
-             <p className="text-[10px] uppercase tracking-[0.8em] font-black">
+             <p className="text-[9px] sm:text-[10px] uppercase tracking-[0.25em] sm:tracking-[0.8em] font-black text-center px-4 leading-relaxed">
                © 2026 SMAŻALNIA JAWORZE • PSTRĄGI • DORSZE • TRADYCJA
              </p>
           </div>
