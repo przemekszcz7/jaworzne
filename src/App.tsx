@@ -122,8 +122,8 @@ export default function App() {
                 <span className="uppercase text-[11px] tracking-[0.6em] opacity-40 font-black flex items-center gap-4">
                   <div className="h-px w-8 bg-black opacity-20" /> Tradycja spod Jaworza
                 </span>
-                <h2 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-6xl xl:text-8xl italic leading-[0.95] tracking-tight">
-                  Smak, który<br /><span className="text-5xl sm:text-7xl md:text-8xl lg:text-7xl xl:text-9xl 2xl:text-[11rem] not-italic uppercase tracking-tighter">Pamiętasz</span>
+                <h2 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-5xl xl:text-6xl italic leading-[0.95] tracking-tight">
+                  Smak, który<br /><span className="text-5xl sm:text-7xl md:text-8xl lg:text-6xl xl:text-7xl 2xl:text-8xl not-italic uppercase tracking-tighter">Pamiętasz</span>
                 </h2>
               </div>
               <div className="space-y-10 font-serif text-2xl text-gray-800 leading-relaxed text-justify-edge opacity-90">
