@@ -110,8 +110,8 @@ export default function App() {
         </div>
 
         {/* Narrative Section */}
-        <section id="about" className="max-w-7xl mx-auto px-8 py-32 md:py-48">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
+        <section id="about" className="max-w-7xl mx-auto px-4 sm:px-8 py-20 sm:py-32 md:py-48">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 xl:gap-32 items-center">
             <motion.div 
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -122,8 +122,8 @@ export default function App() {
                 <span className="uppercase text-[11px] tracking-[0.6em] opacity-40 font-black flex items-center gap-4">
                   <div className="h-px w-8 bg-black opacity-20" /> Tradycja spod Jaworza
                 </span>
-                <h2 className="font-display text-4xl sm:text-6xl md:text-8xl italic leading-[0.95] tracking-tight">
-                  Smak, który<br /><span className="text-5xl sm:text-8xl md:text-[10rem] lg:text-[11rem] not-italic uppercase tracking-tighter">Pamiętasz</span>
+                <h2 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-6xl xl:text-8xl italic leading-[0.95] tracking-tight">
+                  Smak, który<br /><span className="text-5xl sm:text-7xl md:text-8xl lg:text-7xl xl:text-9xl 2xl:text-[11rem] not-italic uppercase tracking-tighter">Pamiętasz</span>
                 </h2>
               </div>
               <div className="space-y-10 font-serif text-2xl text-gray-800 leading-relaxed text-justify-edge opacity-90">
@@ -134,18 +134,7 @@ export default function App() {
                   Nie jesteśmy tylko restauracją – jesteśmy miejscem spotkań, gdzie zapach złocistego pstrąga łączy się z ciepłem domowej zupy rybnej. To tu spróbujesz najlepszych frytek w okolicy, krojonych z prawdziwych ziemniaków.
                 </p>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 pt-12 border-t border-black/10">
-                {[
-                  { val: "100%", label: "RYBY Z NATURY" },
-                  { val: "DOM", label: "RECEPTURA" },
-                  { val: "TOP", label: "W JAWORZU" }
-                ].map((stat, i) => (
-                  <div key={i} className="group">
-                    <div className="text-6xl font-display mb-2 group-hover:scale-110 transition-transform origin-left">{stat.val}</div>
-                    <div className="text-[10px] uppercase tracking-widest opacity-40 font-black">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
+
             </motion.div>
 
             <motion.div 
